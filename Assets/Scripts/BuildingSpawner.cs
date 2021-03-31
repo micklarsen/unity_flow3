@@ -7,13 +7,13 @@ public class BuildingSpawner : MonoBehaviour {
     [SerializeField] private int m_width = 50;
     [SerializeField] private int m_height = 50;
     [SerializeField] private GameObject[] buildings;
-    [SerializeField] private GameObject m_cubePrefab;
+    //[SerializeField] private GameObject m_cubePrefab;
 
     private List<GameObject> houseList = new List<GameObject>();
 
     public void Awake() {
         SpawnGrid();
-        FindDistanceToGround();
+        AddComponentsToInstance();
     }
 
     void SpawnGrid() {
@@ -32,7 +32,7 @@ public class BuildingSpawner : MonoBehaviour {
         }
     }
 
-    void FindDistanceToGround() {
+    void AddComponentsToInstance() {
 
         foreach (GameObject house in houseList) {
 
@@ -43,7 +43,12 @@ public class BuildingSpawner : MonoBehaviour {
             }
 
             Rigidbody rigidbody = house.AddComponent<Rigidbody>();
-            rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
+            //rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
+            rigidbody.constraints = RigidbodyConstraints.FreezePositionX;
+            rigidbody.constraints = RigidbodyConstraints.FreezePositionZ;
+            rigidbody.drag = 2;
+            rigidbody.angularDrag = 10;
+            rigidbody.mass = 1000;
 
         }
 
