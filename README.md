@@ -17,6 +17,8 @@
 Spawned NPC's will walk around, randomly, checking for collisions using raycast.
 Check comments in snippet below
 
+![Col](col.gif)
+
 ```cs
 
 void Update() {
