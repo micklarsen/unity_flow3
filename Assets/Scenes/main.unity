@@ -302,14 +302,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_width: 50
   m_height: 100
-  buildings:
+  clutter:
   - {fileID: 7290431148054736045, guid: 4b52857ab624cba438ce9f2e763a003b, type: 3}
   - {fileID: 5580981434177756579, guid: 7fb72dcb8cc230a42b08d6bbe7e1b975, type: 3}
-  - {fileID: 2724853783979107618, guid: f5cb21407a5b7e744b0bcda59ae87a01, type: 3}
-  - {fileID: 8268790119054594341, guid: e6280b0c90bcf9a438e1c3f3e77515c0, type: 3}
-  - {fileID: 8783385149344373695, guid: f71f18f85e8c62842b76314b8ef1fb59, type: 3}
+  - {fileID: 6467123935578906221, guid: 8ee0f16f28ba48f4abc298469a5d013b, type: 3}
+  - {fileID: 3276791145062981324, guid: b951428e64f7087439cef87fd5e15806, type: 3}
+  - {fileID: 1219021548758180622, guid: ba7d40b7a3474d04198832114f3db13e, type: 3}
+  - {fileID: 3604464653276991795, guid: 8032422fbe11fab43b0f4e16a2891196, type: 3}
+  - {fileID: 1156361911762515558, guid: fd7582ed38c30ed4d89f83d4300570d3, type: 3}
+  - {fileID: 101100302048120051, guid: dbc8934d5b549d14d8a05b657dc33c82, type: 3}
   - {fileID: 7990604444910047352, guid: e12b8760c8fd36649a616ee711c7c924, type: 3}
-  m_cubePrefab: {fileID: 0}
 --- !u!4 &849826161
 Transform:
   m_ObjectHideFlags: 0
@@ -440,7 +442,6 @@ MonoBehaviour:
   m_height: 20
   buildings:
   - {fileID: 5081607850566201352, guid: 27df9a176b9801241be15dba2ebb6aa8, type: 3}
-  m_cubePrefab: {fileID: 0}
 --- !u!4 &1649897459
 Transform:
   m_ObjectHideFlags: 0
