@@ -6,15 +6,16 @@ public class ClutterSpawner : MonoBehaviour {
 
     [SerializeField] private int m_width = 50;
     [SerializeField] private int m_height = 50;
-    [SerializeField] private GameObject[] buildings;
-    //[SerializeField] private GameObject m_cubePrefab;
+    [SerializeField] private GameObject[] clutter;
 
     private List<GameObject> houseList = new List<GameObject>();
+
 
     public void Awake() {
         SpawnGrid();
         AddComponentsToInstance();
     }
+
 
     void SpawnGrid() {
         //Start instantiating on X
@@ -24,13 +25,14 @@ public class ClutterSpawner : MonoBehaviour {
             for (int z = 0; z < m_height; z++) {
                 int randRangeX = Random.Range(100, 900);
                 int randRangeZ = Random.Range(100, 900);
-                int rand = Random.Range(0, buildings.Length);
-                GameObject houseInstance = Instantiate(buildings[rand], new Vector3(randRangeX, 100, randRangeZ), Quaternion.identity);
+                int rand = Random.Range(0, clutter.Length);
+                GameObject houseInstance = Instantiate(clutter[rand], new Vector3(randRangeX, 100, randRangeZ), Quaternion.identity);
                 houseInstance.transform.Rotate(0, Random.Range(0, 359), 0);
                 houseList.Add(houseInstance);
             }
         }
     }
+
 
     void AddComponentsToInstance() {
 
